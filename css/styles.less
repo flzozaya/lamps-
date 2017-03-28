@@ -1,0 +1,181 @@
+/* COLORS: */
+  @blue: #20A1D4;
+  @green: #1CBC2C;
+  @orange: #EF5F3C;
+  @black: #424242;
+  @grey: #777;
+  @ltegrey: #eaeaea;
+  @white: #ffffff;
+
+.border-radius(@radius) {
+-webkit-border-radius: @radius;
+-moz-border-radius: @radius;
+border-radius: @radius;
+}
+/* ==================================================  */
+
+
+/* Global resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
+  color: @black;
+  line-height: 1.4;
+  font-size: 15px;
+}
+
+/* Fonts */
+h1 {
+  font-family: "rooney-web", 'AmericanTypewriter', Rockwell, serif;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.container {
+  margin: 2em auto;
+  max-width: 450px;
+  text-align: center;
+
+/* Your CSS goes here */
+    .inner-container { 
+         width: 70%;
+         margin: 0 auto;
+    
+        .project-money-needed {
+            background-color: @black;
+            color: @ltegrey;
+            .border-radius(4px);
+            position: relative;
+
+            p {
+                line-height: 3.8;
+                font-size: 15px;
+            }
+
+            span.caret-down {
+                position: absolute;
+                right: 40px;
+                width: 6px;
+                border: 7px solid @white;        
+                border-top: 7px solid @black;
+                display: block;
+            }
+        }
+
+        .fund-content {
+            margin: 15px auto 0 auto;
+            border: 1px solid @ltegrey;   
+            border-bottom: 2px solid #eaeaea;
+            
+            .progress-bar {
+                border-bottom: 1px solid @ltegrey;   
+                min-height: 12px;
+                background-color: @orange;
+            }
+
+            .inner-fund-content {
+                padding: 1.5em 2em;
+                color: @grey;
+                text-align: left;
+
+                p {
+                    margin-bottom: 20px;
+                    text-align: left;
+                }
+                p.copy::first-letter {
+                    text-transform: uppercase;
+                }
+                span.days-left {
+                    color: @orange;
+                    font-weight: bold;
+                }
+                span.joined-donors {
+                    font-weight: bold;
+                }
+
+                .give {
+                    margin-top: 10px;
+                    
+                    input, button {
+                        width: 40%;
+                        min-width: 115px;
+                    .border-radius(4px);
+                    font-size: 1em;  
+                    }
+                    
+                    input {
+                    padding: 0.9em 0.5em;
+                    margin-right: 13px;
+                    border: 1px solid @ltegrey; 
+                    text-indent: 0.9em;
+
+                    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                        text-indent: 0em;
+                        }
+                        &::-moz-placeholder { /* Firefox 19+ */
+                        text-indent: 0em;
+                        }
+                        &:-ms-input-placeholder { /* IE 10+ */
+                        text-indent: 0em;
+                        }
+                        &:-moz-placeholder { /* Firefox 18- */
+                        text-indent: 0em;
+                        }
+                    }
+                    
+                    button {
+                    border: 0;
+                    padding: 0.95em 0.7em;
+                    color: @white;
+                    background-color: @green;
+                    cursor: pointer;
+                    
+                    }
+                }    
+                a.why-50 {
+                    display: inline-block;
+                    font-size: 0.9em;
+                    font-style: italic;
+                    margin-top: 10px;
+                    text-decoration: none;
+                    color: @blue;
+                    text-align: left;
+                }        
+            }
+        }
+        .save-share {
+            margin-top: 12px;
+        
+            button {
+                cursor: pointer;
+                width: 40%;
+                min-width: 150px;
+                .border-radius(4px);
+                font-size: 1em; 
+                border: 1px solid @ltegrey;
+                border-bottom: 2px solid @ltegrey;                    
+                padding: 0.8em 0.7em;
+                color: @grey;
+                background-color: #F2F2F2;
+                background: #ffffff; /* Old browsers */
+                background: -moz-linear-gradient(top,  #ffffff 0%, #f2f2f2 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  #ffffff 0%,#f2f2f2 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  #ffffff 0%,#f2f2f2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=0 ); /* IE6-9 */
+
+
+                &:first-child {
+                    margin-right: 10px;
+                    
+                }
+            }
+        }
+    }
+}
+
+    
